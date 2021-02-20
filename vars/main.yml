@@ -1,0 +1,12 @@
+---
+# vars file for ec2_launcher
+mykey: "your_key_name_without_.pem"
+instancetype: "t2.micro"
+imageid: "ami_image_id"
+subnetid: "subnet-093b4145"
+region_name: "ap-south-1"
+osname: "your_os_name"
+total_instance: 1
+security: "sg-00e31b5ef35314658"
+awsaccess: "your_aws_access"
+awssecret: "your_aws_secret"

@@ -1,0 +1,18 @@
+---
+# tasks file for ec2_launcher
+  - name: launching ec2-instance
+    ec2:
+          image: "{{ imageid }}"
+          count: "{{  total_instance }}"
+          region: "{{ region_name }}"
+          instance_type: "{{ instancetype }}"
+          vpc_subnet_id: "{{ subnetid }}"
+          instance_tags:
+                Name: "{{ osname  }}"
+          assign_public_ip: yes
+          key_name: "{{ mykey }}"
+          state: present
+          aws_access_key: "{{ awsaccess }}"
+          aws_secret_key: "{{ awssecret }}"
+          wait: yes
+          wait_timeout: 200
